@@ -17,7 +17,7 @@ const Services = () => {
 
     return (
         <div>
-            <div className=' grid grid-cols-2'>
+            <div className=' grid grid-cols-3'>
                 {
                     allServices.slice(0, 3).map(services => <ServiceCart services={services}></ServiceCart>)
                 }
