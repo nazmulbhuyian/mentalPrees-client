@@ -1,0 +1,50 @@
+[
+    {
+        "service_id": "1",
+        "title": "DEPRESSION TREATMENT",
+        "img": "https://demo.web3canvas.com/themeforest/mentalpress/assets/images/image-16-360x240.jpg",
+        "price": "850.00",
+        "description": "Depression is a mental illness, which one should not confuse with the short-term emotional distress, anxiety attacks or feeling low, which also are constituents of depression. Anyone can feel low for a brief period of time, or have anxiety attacks once in a while, but that does not mean they are suffering from depression. Depression is much more serious than that, and is a persistent feeling of sadness, loneliness, grief, uselessness, and emotional pain. If not treated at the right time, it can lead to a person turning suicidal, and may try to harm himself/herself or commit suicide. We approach patients with depression through various routes at one time to make the treatment effective, and help patients recover from their disruptive mental state sooner. First of all, we listen, understand, analyze and evaluate the problems of the patient through verbal counselling sessions, and then categorize the depression level medically to define the treatment path to follow. Depression is treatable, and there are many effective treatments available.",
+        "ratting": "3.5"
+    },
+    {
+        "service_id": "2",
+        "title": "ANXIETY TREATMENT",
+        "img": "https://demo.web3canvas.com/themeforest/mentalpress/assets/images/image-1-360x240.jpg",
+        "price": "1100.00",
+        "description": "Whether it is social phobia, specific phobia, post traumatic stress disorder, general anxiety disorder, obsessive compulsive disorder, or similar, it falls under the category of anxiety disorder, and calls for clinical and therapeutic treatment. And, this is where our expertise can help you. We have a systematic approach to dealing with our patients’ problems, and help them through a round of clinical counselling session to firstly, introduce them to their problems, and then show them the way to dealing with and confront those conflicting issues, without fear or phobia. It has been medically proven that when the people confront what they fear repeatedly without getting the negative outcome they actually feared, the sense of phobia would gradually subside. This does not only help in changing the mental frame of a person in a natural manner, but also helps in building back the lost confidence and sensitivity towards self. In severe cases, we take the help of medicines and therapies that would help our patients to fight back the physical symptoms caused by the anxiety.",
+        "ratting": "2.5"
+    },
+    {
+        "service_id": "3",
+        "title": "COUPLES THERAPY",
+        "img": "https://demo.web3canvas.com/themeforest/mentalpress/assets/images/image-21-360x240.jpg",
+        "price": "680.00",
+        "description": "A relationship goes through numerous phases during its life cycle, and it is obvious for it to have a few rough patches. The strength of a relationship is reflected in how the couples deal with rough patches and move ahead. The lifestyle of the people and the modern day thinking has changed the pattern of thinking of people in respect to relationships. This has turned the statistics for divorce and marriage upside down. While divorce and separation is necessary in many cases, if the problems are not only circumstantial, but also irrecoverable and irreversible. We believe that love should be given a chance, and that there are relationships that can be saved, if only the people involved take that first step and make that last ditch effort to save their relationship. And, this is where the couple therapy comes in. Our approach towards couples therapy is oriented not only towards solving the problems the couple is facing with each other, but to revive the feeling of love and affection they have towards each other.",
+        "ratting": "4.5"
+    },
+    {
+        "service_id": "4",
+        "title": "INDIVIDUAL TREATMENT",
+        "img": "https://demo.web3canvas.com/themeforest/mentalpress/assets/images/image-27-360x240.jpg",
+        "price": "950.00",
+        "description": "Individual treatment is often termed as psychotherapy, and is meant to help people with their emotional issues, which can range in order of their severity or intensity. The main aim of this form of therapy is to change the quality of life by defining the path of life clearly, and bringing in more clarity. Whether it is the problem of repressed childhood that you are facing, or an emotional breakdown due to divorce, failure or loss of a loved one, a professional psychologist can help you revive your mental health through systematic counselling. There are many emotional issues that find a corner in our heart, and refuse to die down. With time, these issues can transform into a sort of emotional tumor that impacts negatively on our daily life, such as lack of concentration, enthusiasm, self respect, will to change, encouragement, and so on. These issues can spiral into our lives in various ways and gets channelled into other zones, which can create problems in the relationships, professional life, and health. We address the root cause of the problem after carefully listening the patient.",
+        "ratting": "3"
+    },
+    {
+        "service_id": "5",
+        "title": "POST-DIVORCE RECOVERY",
+        "img": "https://demo.web3canvas.com/themeforest/mentalpress/assets/images/image-35-360x240.jpg",
+        "price": "1300.00",
+        "description": "Our systematic approach towards couple therapy is defined on the lines of enhancing the communication between the partners, and establishing short term and long term goals, where both the partners would be given their own schedules of expectations to be fulfilled, effectively working towards improving the relationship. With the help of third and neutral perspective, we help bring in clarity in the relationship by clearly defining the mistakes each other have made, and where the overreaction caused the emotional outburst, which in turn, deepened the hole in the relationship. We define the treatment path in couples therapy after patiently listening and carefully understanding the problems couple is facing. Our practical and scientific approach, while balancing and weighing the emotions at stake, helps us bring in the much needed transparency and attachment among the partners. It definitively helps in doing the right thing, and taking the right decision, not only for the relationship, but personally as well.",
+        "ratting": "4.5"
+    },
+    {
+        "service_id": "6",
+        "title": "THERAPY FOR CHILDREN",
+        "img": "https://demo.web3canvas.com/themeforest/mentalpress/assets/images/image-54-360x240.jpg",
+        "price": "1800.00",
+        "description": "There are many emotional issues that find a corner in our heart, and refuse to die down. With time, these issues can transform into a sort of emotional tumor that impacts negatively on our daily life, such as lack of concentration, enthusiasm, self respect, will to change, encouragement, and so on. These issues can spiral into our lives in various ways and gets channelled into other zones, which can create problems in the relationships, professional life, and health. We address the root cause of the problem after carefully listening the patients, and help in changing the pattern of their thinking and beliefs. It helps in fighting back the problems at hand with much more confidence. However, we do not only try to motivate, but follow the scientific guidelines of psychology to rejuvenate the mental health of the patient, and even follow the medical treatment, wherever necessary to help the patients free themselves from the emotional burden, stress and anxiety that are causing life changing issues.",
+        "ratting": "5"
+    }
+]
