@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../../assest/header.png'
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Header = () => {
+
+    const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () =>{
+    logOut()
+    .then()
+    .catch()
+  }
+
     return (
         <div className='flex'>
             <div>
@@ -26,6 +36,8 @@ const Header = () => {
                     <Link to='/allServices'>Services</Link>
                     <Link to='/login'>Login</Link>
                     <Link to='/signUp'>Sign Up</Link>
+                    <button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button>
+                    <img src={user?.email} alt="" />
                 </div>
         </div>
     );
