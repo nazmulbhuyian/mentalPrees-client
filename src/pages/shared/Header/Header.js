@@ -34,10 +34,11 @@ const Header = () => {
                 </div> */}
                 <div className='justify-end'>
                     <Link to='/allServices'>Services</Link>
+                    <Link to='/blog'>Blogs</Link>
                     <Link to='/login'>Login</Link>
                     <Link to='/signUp'>Sign Up</Link>
                     <button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button>
-                    <img src={user?.email} alt="" />
+                    <p>{user?.email}</p>
                 </div>
         </div>
     );
