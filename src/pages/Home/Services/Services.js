@@ -17,12 +17,12 @@ const Services = () => {
 
     return (
         <div>
-            <div className=' grid grid-cols-3'>
+            <div className=' grid grid-cols-3 mb-8'>
                 {
                     allServices.slice(0, 3).map(services => <ServiceCart key={services._id} services={services}></ServiceCart>)
                 }
             </div>
-            <Link to='/allServices'><button className='btn btn-ghost'>See All</button></Link>
+            <Link to='/allServices'><button className='btn btn-ghost bg-red-300 mx-96 my-5'>See All</button></Link>
         </div>
     );
 };

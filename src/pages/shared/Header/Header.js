@@ -5,41 +5,39 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Header = () => {
 
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
-  const handleLogOut = () =>{
-    logOut()
-    .then()
-    .catch()
-  }
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     return (
-        <div className='flex'>
+        <div className='flex justify-between my-5'>
             <div>
                 <Link to='/'><img src={img} alt="" /></Link>
             </div>
-            {/* <div>
-                <p>Home</p>
-                <div>
-                    <p>Miapure, Mirerpara</p>
-                    <p>Bejumgonj, Noakhali</p>
-                </div>
-                </div>
-                <div>
-                    <p>Time</p>
-                    <div>
-                        <p>mon-sat, 9.00-5.00</p>
-                        <p>sat closed</p>
-                    </div>
-                </div> */}
-                <div className='justify-end'>
-                    <Link to='/allServices'>Services</Link>
-                    <Link to='/blog'>Blogs</Link>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/signUp'>Sign Up</Link>
-                    <button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button>
-                    <p>{user?.email}</p>
-                </div>
+            <div>
+                <Link to='/allServices'><button className='btn btn-ghost ml-3 text-xl'>Services</button></Link>
+                <Link to='/blog'><button className='btn btn-ghost ml-3 text-xl'>Blogs</button></Link>
+                {
+                    user?.email ?
+                        <>
+                            <Link to='/myReview'><button className='btn btn-ghost ml-3 text-xl'>My reviews</button></Link>
+                            <Link to='/addService'><button className='btn btn-ghost ml-3 text-xl'>Add service</button></Link>
+                            <button onClick={handleLogOut} className='btn btn-ghost ml-3 text-xl'>Sign Out</button>
+                            
+                        </>
+                        :
+                        <>
+                        <Link to='/login'><button className='btn btn-ghost ml-3 text-xl'>Login</button></Link>
+                        <Link to='/signUp'><button className='btn btn-ghost ml-3 text-xl'>Sign Up</button></Link>
+                        </>
+                        
+                }
+                <p>{user?.email ? user.email : ''}</p>
+            </div>
         </div>
     );
 };

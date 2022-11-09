@@ -14,11 +14,11 @@ const AllServiceCart = ({ services}) => {
                 <h2 className="card-title">{title}</h2>
                 <p>{description.slice(1, 100)}</p>
                 <div className='flex'>
-                    <p>Price: {price}</p>
-                    <p>Ratting: {ratting}</p>
+                    <p className='text-2xl'>Price: {price}</p>
+                    <p className='text-2xl'>Ratting: {ratting}</p>
                 </div>
 
-                <Link to={`/serviceDetails/${_id}`}><button className='btn btn-ghost'>Details</button></Link>
+                <Link to={`/serviceDetails/${_id}`}><button className='btn btn-ghost bg-red-400 ml-24 my-5'>Details</button></Link>
 
             </div>
         </div>

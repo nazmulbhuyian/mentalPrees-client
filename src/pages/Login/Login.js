@@ -45,7 +45,7 @@ const Login = () => {
           })
       }
     return (
-        <div className="hero my-20">
+        <div className="hero my-20 flex ml-96">
       <div className="hero-content flex-col lg:flex-row grid md:grid-cols-2 gap-10 w-full">
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 my-20 py-20">
           <h1 className="text-5xl font-bold text-center">Login</h1>

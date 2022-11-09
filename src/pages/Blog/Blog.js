@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
+        <div className='my-24'>
 
             <div className="collapse">
                 <input type="checkbox" className="peer" />

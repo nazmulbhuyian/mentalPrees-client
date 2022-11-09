@@ -28,7 +28,7 @@ const bannerData = [
 
 const Banner = () => {
     return (
-        <div className="carousel w-full py-10">
+        <div className="carousel w-full py-16 mx-52">
 
             {
                 bannerData.map(slide => <BannerImg
