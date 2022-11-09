@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const AllServiceCart = ({ services }) => {
+const AllServiceCart = ({ services}) => {
 
-    const { title, img, price, ratting, description, service_id } = services;
+    const { title, img, price, ratting, description, _id} = services;
+    // console.log(services);
 
 
     return (
@@ -16,18 +18,7 @@ const AllServiceCart = ({ services }) => {
                     <p>Ratting: {ratting}</p>
                 </div>
 
-                <label htmlFor={service_id} className="btn btn-ghost">Details</label>
-                <input type="checkbox" id={service_id} className="modal-toggle" />
-                <div className="modal">
-                    <div className="modal-box">
-                        <img src={img} alt="" srcset="" />
-                        <h3 className="font-bold text-lg">{title}</h3>
-                        <p className="py-4">{description}</p>
-                        <div className="modal-action">
-                            <label htmlFor={service_id} className="btn">Close</label>
-                        </div>
-                    </div>
-                </div>
+                <Link to={`/serviceDetails/${_id}`}><button className='btn btn-ghost'>Details</button></Link>
 
             </div>
         </div>

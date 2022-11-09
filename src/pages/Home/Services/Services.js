@@ -7,7 +7,7 @@ const Services = () => {
     const [allServices, setAllServices] = useState([])
 
     useEffect(() => {
-        fetch('service.json')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => {
                 setAllServices(data);
@@ -19,7 +19,7 @@ const Services = () => {
         <div>
             <div className=' grid grid-cols-3'>
                 {
-                    allServices.slice(0, 3).map(services => <ServiceCart services={services}></ServiceCart>)
+                    allServices.slice(0, 3).map(services => <ServiceCart key={services._id} services={services}></ServiceCart>)
                 }
             </div>
             <Link to='/allServices'><button className='btn btn-ghost'>See All</button></Link>
