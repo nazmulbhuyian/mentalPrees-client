@@ -14,11 +14,7 @@ const MyReview = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`https://mental-press-server.vercel.app/comments?email=${user?.email}`, {
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('genius-token')}`
-                }
-            })
+            fetch(`https://mental-press-server.vercel.app/comments?email=${user?.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setOrders(data)
@@ -27,7 +23,7 @@ const MyReview = () => {
     }, [user?.email])
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure want to cancle this order')
+        const proceed = window.confirm('Are you sure want to cancle this comment')
         if (proceed) {
             fetch(`https://mental-press-server.vercel.app/comments/${id}`, {
                 method: 'DELETE'

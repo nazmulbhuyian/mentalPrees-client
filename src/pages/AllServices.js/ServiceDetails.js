@@ -4,9 +4,9 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const ServiceDetails = () => {
 
-    const { title, img, price, ratting, description, _id } = useLoaderData();
+    const { title, img, price, ratting, description, _id, review } = useLoaderData();
 
-    const [review, setReview] = useState([])
+    const [reviews, setReview] = useState([])
     useEffect(() => {
         fetch('https://mental-press-server.vercel.app/comments')
             .then(res => res.json())
@@ -45,7 +45,7 @@ const ServiceDetails = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Ordered Confirm Successfully')
+                    alert('Comment Confirm Successfully')
                     form.reset();
                 }
             })
@@ -89,6 +89,19 @@ const ServiceDetails = () => {
 
             {
                 review.map(item => <div className="card w-3/5 bg-base-100 shadow-xl my-10">
+                    <div className='flex'>
+                    <figure><img src={item?.photo} className="rounded" alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">
+                                {item?.customer}
+                            </h2>
+                            {item?.message}
+                        </div>
+                    </div>
+                </div>)
+            }
+            {
+                reviews.map(item => <div className="card w-3/5 bg-base-100 shadow-xl my-10">
                     <div className='flex'>
                     <figure><img src={item?.photo} className="rounded" alt="Shoes" /></figure>
                         <div className="card-body">
