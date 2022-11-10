@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBy6vGLUfT9nW5GMbZuL9SR0eWXVnA6h58",
-  authDomain: "mental-press.firebaseapp.com",
-  projectId: "mental-press",
-  storageBucket: "mental-press.appspot.com",
-  messagingSenderId: "382013999312",
-  appId: "1:382013999312:web:5a06759271b0cd2978f6d5"
+  apiKey: process.env.React_APP_apiKey,
+  authDomain: process.env.React_APP_authDomain,
+  projectId: process.env.React_APP_projectId,
+  storageBucket: process.env.React_APP_storageBucket,
+  messagingSenderId: process.env.React_APP_messagingSenderId,
+  appId: process.env.React_APP_appId,
 };
 
 // Initialize Firebase
