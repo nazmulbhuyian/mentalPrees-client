@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import UseTitle from '../../Hooks/UseTitle';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -7,8 +7,6 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 const Login = () => {
     const { login } = useContext(AuthContext);
     const Navigate = useNavigate()
-    // const location = useLocation();
-    // const from = location.state?.from?.pathname || '/';
 
     UseTitle('Login')
 
@@ -22,28 +20,7 @@ const Login = () => {
           .then(result => {
             const user = result.user;
             console.log(user);
-            Navigate('/');
-            
-    
-            // const currentUser = { email: user.email }
-            // console.log(currentUser);
-            
-             // Get JWT Toke
-    
-            // fetch('https://mental-press-server.vercel.app/jwt', {
-            //   method: 'POST',
-            //   headers: {
-            //     'content-type': 'application/json'
-            //   },
-            //   body: JSON.stringify(currentUser)
-            // })
-            //   .then(res => res.json())
-            //   .then(data => {
-            //     console.log(data);
-            //     localStorage.setItem('mentalPress-token', data.token)
-            //     Navigate(from, { replace: true })
-            //   })
-    
+            Navigate('/');    
           })
           .then(err => {
             console.error(err);

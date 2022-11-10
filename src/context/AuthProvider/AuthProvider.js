@@ -34,7 +34,6 @@ const AuthProvider = ({children}) => {
 
     useEffect(() =>{
         const unSubscibe =  onAuthStateChanged(auth, currentUser =>{
-            // console.log(currentUser);
             setUser(currentUser);
             setLoading(false)
         })
@@ -43,7 +42,6 @@ const AuthProvider = ({children}) => {
         }
     }, [])
 
-    // console.log(uselogOutr);
 
     const authInfo = {user, loading, createUser, login, logOut, googleSignIn}
 

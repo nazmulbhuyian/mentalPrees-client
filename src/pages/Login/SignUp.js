@@ -21,7 +21,6 @@ const SignUp = () => {
             const user = result.user;
             console.log(user);
             Navigate('/')
-            // authToken(user);
         })
         .then(err =>{
             console.error(err);

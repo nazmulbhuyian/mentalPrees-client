@@ -34,11 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/addService',
-        element: <AddService></AddService>
+        element: <PrivateRoute><AddService></AddService></PrivateRoute>
       },
       {
         path: '/myReview',
-        element: <MyReview></MyReview>
+        element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
       },
       {
         path: '/login',
@@ -49,6 +49,10 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>
       }
     ]
+  },
+  {
+    path: '*',
+    element: <div className="mx-96 my-80"><h1 className="text-4xl">OOPPSS Nothing Found !!!</h1></div>
   }
 ])
 

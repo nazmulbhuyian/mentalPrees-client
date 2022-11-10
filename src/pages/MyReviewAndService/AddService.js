@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
-import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import React from 'react';
 import UseTitle from '../../Hooks/UseTitle';
 
 const AddService = () => {
 
-    // const {user} = useContext(AuthContext);
 
     UseTitle('Add-Service')
 
@@ -36,7 +34,7 @@ const AddService = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    // alert('Ordered Confirm Successfully')
+                    alert('Services added Successfully')
                     form.reset();
                 }
             })
@@ -46,20 +44,6 @@ const AddService = () => {
     }
 
     return (
-        // <div className="card w-full bg-base-100 shadow-xl">
-        //         <figure><img src={img} alt="Shoes" /></figure>
-        //         <div className="card-body">
-        //             <h2 className="card-title">
-        //                 {title}
-        //             </h2>
-        //             {description}
-        //             <div className="card-actions justify-between">
-        //                 <div className="badge badge-outline text-red-400">Price: ${price}</div>
-        //                 <div className="badge badge-outline text-red-400">Ratting: {ratting}</div>
-        //             </div>
-        //             <Link to='/allServices'><button className='btn btn-ghost bg-red-400'>Go Back</button></Link>
-        //         </div>
-        //     </div>
 
 
 
