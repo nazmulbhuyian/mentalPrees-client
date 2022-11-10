@@ -24,10 +24,10 @@ const Header = () => {
                 {
                     user?.email ?
                         <>
-                            <Link to='/myReview'><button className='btn btn-ghost ml-3 text-xl'>My reviews</button></Link>
-                            <Link to='/addService'><button className='btn btn-ghost ml-3 text-xl'>Add service</button></Link>
-                            <button onClick={handleLogOut} className='btn btn-ghost ml-3 text-xl'>Sign Out</button>
-                            
+                            <Link to='/myReview'><button className='btn btn-ghost ml-2 text-xl'>My reviews</button></Link>
+                            <Link to='/addService'><button className='btn btn-ghost ml-2 text-xl'>Add service</button></Link>
+                            <button onClick={handleLogOut} className='btn btn-ghost ml-2 text-xl'>Sign Out</button>
+                            <p>{user?.photoURL ? user.photoURL : ''}</p>
                         </>
                         :
                         <>
@@ -36,7 +36,7 @@ const Header = () => {
                         </>
                         
                 }
-                <p>{user?.email ? user.email : ''}</p>
+                
             </div>
         </div>
     );

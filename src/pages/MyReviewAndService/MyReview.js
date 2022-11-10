@@ -38,7 +38,7 @@ const MyReview = () => {
     return (
         <div>
         {
-            orders?.map(item => <div className="card w-2/5 bg-base-100 shadow-xl my-10">
+            orders?.map(item => <div className="card w-3/5 bg-base-100 shadow-xl my-10">
                 
         <div className='flex'>
         <div>
