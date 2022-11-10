@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import UseTitle from '../../Hooks/UseTitle';
+import ReviewDetail from './ReviewDetail';
 
 const MyReview = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const [orders, setOrders] = useState([])
     // console.log(orders);
@@ -13,7 +14,7 @@ const MyReview = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/comments?email=${user?.email}`, {
+            fetch(`https://mental-press-server.vercel.app/comments?email=${user?.email}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('genius-token')}`
                 }
@@ -25,38 +26,50 @@ const MyReview = () => {
         }
     }, [user?.email])
 
-    const handleDelete = id =>{
-      const proceed = window.confirm('Are you sure want to cancle this order')
-      if(proceed){
-          fetch(`http://localhost:5000/comments/${id}`, {
-              method: 'DELETE'
-          })
-          .then(res => res.json())
-          .then(data =>{
-              console.log(data);
-          })
-      }
-  }
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure want to cancle this order')
+        if (proceed) {
+            fetch(`https://mental-press-server.vercel.app/comments/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                })
+        }
+    }
+    
+    // const handleStatusUpdate = id => {
+    //     fetch(`http://localhost:5000/comments/${id}`, {
+    //         method: 'PATCH',
+    //         Headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify()
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data)
+    //             // if (data.matchedCount > 0) {
+    //             //     const remaining = orders.filter(odr => odr._id !== id)
+    //             //     const approving = orders.find(odr => odr._id === id)
+    //             //     approving.status = 'Approve'
+
+    //             //     const newOrders = [approving, ...remaining];
+    //             //     setOrders(newOrders);
+    //             // }
+    //             setOrders(data);
+    //         })
+    // }
 
     return (
         <div>
-        {
-            orders?.map(item => <div className="card w-3/5 bg-base-100 shadow-xl my-10">
-                
-        <div className='flex'>
-        <div>
-        <button onClick={() => handleDelete(item._id)} className='btn btn-ghost'>X</button>
-        </div>
-            <figure><img src={item?.photo} className="rounded w-24" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    {item?.customer}
-                </h2>
-                {item?.message}
-            </div>
-        </div>
-    </div>)
-    }
+            {
+                orders?.map(item =>
+                     <ReviewDetail item={item} handleDelete={handleDelete}>
+
+                     </ReviewDetail>)
+            }
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import UseTitle from '../../Hooks/UseTitle';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -7,6 +7,8 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 const Login = () => {
     const { login } = useContext(AuthContext);
     const Navigate = useNavigate()
+    // const location = useLocation();
+    // const from = location.state?.from?.pathname || '/';
 
     UseTitle('Login')
 
@@ -26,9 +28,9 @@ const Login = () => {
             // const currentUser = { email: user.email }
             // console.log(currentUser);
             
-            //Get JWT Toke
+             // Get JWT Toke
     
-            // fetch('https://genius-car-server-two-ivory.vercel.app/jwt', {
+            // fetch('https://mental-press-server.vercel.app/jwt', {
             //   method: 'POST',
             //   headers: {
             //     'content-type': 'application/json'
@@ -38,7 +40,7 @@ const Login = () => {
             //   .then(res => res.json())
             //   .then(data => {
             //     console.log(data);
-            //     localStorage.setItem('genius-token', data.token)
+            //     localStorage.setItem('mentalPress-token', data.token)
             //     Navigate(from, { replace: true })
             //   })
     

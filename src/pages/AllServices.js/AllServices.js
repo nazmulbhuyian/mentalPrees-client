@@ -9,7 +9,7 @@ const AllServices = () => {
     UseTitle('Service')
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://mental-press-server.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 setAllServices(data);
@@ -19,10 +19,10 @@ const AllServices = () => {
 
     return (
         <div className=' grid grid-cols-2 gap-8 ml-52 my-10'>
-                {
-                    allServices.map(services => <AllServiceCart key={services._id} services={services}></AllServiceCart>)
-                }
-            </div>
+            {
+                allServices.map(services => <AllServiceCart key={services._id} services={services}></AllServiceCart>)
+            }
+        </div>
     );
 };
 

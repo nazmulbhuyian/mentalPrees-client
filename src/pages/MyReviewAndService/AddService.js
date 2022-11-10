@@ -25,7 +25,7 @@ const AddService = () => {
             ratting
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://mental-press-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -66,13 +66,13 @@ const AddService = () => {
         <form onSubmit={handlePlaceOrder} className='my-8'>
             <h2 className="text-4xl my-2">Pleaze Add A Service:</h2>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-            <input name='photo' type="text" placeholder="Photo URL" className="input input-bordered w-full" required />
+                <input name='photo' type="text" placeholder="Photo URL" className="input input-bordered w-full" required />
                 <input name='title' type="text" placeholder="Title" className="input input-bordered w-full" required />
                 <textarea name='description' className="textarea textarea-accent w-full my-3" placeholder="Description" required></textarea>
                 <input name='price' type="text" placeholder="Price" className="input input-bordered w-full" required />
                 <input name='ratting' type="text" placeholder="Ratting" className="input input-bordered w-full" required />
             </div>
-            
+
             <input className='btn my-5 bg-orange-600' type="submit" value="Please Confirm" />
         </form>
     );
