@@ -47,7 +47,7 @@ const ServiceDetails = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    // alert('Ordered Confirm Successfully')
+                    alert('Ordered Confirm Successfully')
                     form.reset();
                 }
             })

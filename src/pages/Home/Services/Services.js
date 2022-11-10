@@ -22,7 +22,7 @@ const Services = () => {
                     allServices.slice(0, 3).map(services => <ServiceCart key={services._id} services={services}></ServiceCart>)
                 }
             </div>
-            <Link to='/allServices'><button className='btn btn-ghost bg-red-300 mx-96 my-5'>See All</button></Link>
+            <Link to='/allServices'><button className='btn btn-ghost bg-slate-300 mx-96 my-5'>See All</button></Link>
         </div>
     );
 };

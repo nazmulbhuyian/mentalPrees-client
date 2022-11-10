@@ -17,21 +17,21 @@ const AboutDoctor = () => {
                 <div className='flex mb-5'>
                     <img src={one} alt="" />
                     <div className='ml-4'>
-                        <h3>DEPRESSION TREATMENT</h3>
+                        <h3 className='text-xl'>DEPRESSION TREATMENT</h3>
                         <p>Depression is a mental illness,<br /> which one should not confuse.</p>
                     </div>
                 </div>
                 <div className='flex mb-5'>
                     <img src={two} alt="" />
                     <div className='ml-4'>
-                    <h3>INDIVIDUAL TREATMENT</h3>
+                    <h3 className='text-xl'>INDIVIDUAL TREATMENT</h3>
                         <p>Individual treatment is often <br /> termed as psychotherapy, and is.</p>
                     </div>
                 </div>
                 <div className='flex mb-5'>
                     <img src={three} alt="" />
                     <div className='ml-4'>
-                        <h3>ANXIETY TREATMENT</h3>
+                        <h3 className='text-xl'>ANXIETY TREATMENT</h3>
                         <p>Whether it is social phobia, specific <br /> phobia, post traumatic.</p>
                     </div>
                 </div>
