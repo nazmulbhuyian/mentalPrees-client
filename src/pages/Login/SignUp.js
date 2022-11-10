@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import UseTitle from '../../Hooks/UseTitle';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignUp = () => {
     const {createUser} = useContext(AuthContext)
     const Navigate = useNavigate()
+
+    UseTitle('Sign-Up')
 
     const handleSignUp = event =>{
         event.preventDefault();

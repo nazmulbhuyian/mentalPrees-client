@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import UseTitle from '../../Hooks/UseTitle';
 
 const MyReview = () => {
 
     const {user} = useContext(AuthContext);
 
     const [orders, setOrders] = useState([])
-    console.log(orders);
+    // console.log(orders);
+
+    UseTitle('My-Review')
 
     useEffect(() => {
         if (user?.email) {
