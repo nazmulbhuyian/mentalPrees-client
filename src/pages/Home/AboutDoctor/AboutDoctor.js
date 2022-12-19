@@ -5,7 +5,7 @@ import three from './three.jpg'
 
 const AboutDoctor = () => {
     return (
-        <div className='flex justify-around py-14 mb-20 bg-slate-200'>
+        <div className='lg:flex justify-around py-14 mb-20 bg-slate-200'>
             <div className='w-2/5'>
                 <h1 className='text-4xl'>Welcome to my Practice</h1>
                 <p>As a psychologist and a cognitive behavioral therapist I have worked with hundreds of patients and understand the intricacies of various psychological issues that people face.

@@ -14,7 +14,7 @@ const ServiceCart = ({ services }) => {
                     <p>Price: {price}</p>
                     <p>Ratting: {ratting}</p>
                 </div>
-                <Link to={`/serviceDetails/${_id}`}><button className='btn btn-ghost'>Details</button></Link>
+                <Link to={`/serviceDetails/${_id}`}><button className='btn btn-info w-full'>Details</button></Link>
 
             </div>
         </div>

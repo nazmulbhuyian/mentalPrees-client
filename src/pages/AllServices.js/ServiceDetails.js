@@ -4,7 +4,7 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const ServiceDetails = () => {
 
-    const { title, img, price, ratting, description, _id, review } = useLoaderData();
+    const { title, img, price, ratting, description, _id } = useLoaderData();
 
     const [reviews, setReview] = useState([])
     useEffect(() => {
@@ -87,19 +87,7 @@ const ServiceDetails = () => {
 
             <h1 className='text-5xl'>People Also Said.</h1>
 
-            {
-                review.map(item => <div className="card w-3/5 bg-base-100 shadow-xl my-10">
-                    <div className='flex'>
-                    <figure><img src={item?.photo} className="rounded" alt="Shoes" /></figure>
-                        <div className="card-body">
-                            <h2 className="card-title">
-                                {item?.customer}
-                            </h2>
-                            {item?.message}
-                        </div>
-                    </div>
-                </div>)
-            }
+            
             {
                 reviews.map(item => <div className="card w-3/5 bg-base-100 shadow-xl my-10">
                     <div className='flex'>
